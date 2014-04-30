@@ -1,0 +1,376 @@
+history
+    1  clear
+    2  ls
+    3  clear
+    4  top
+    5  cler
+    6  host www.ung.br
+    7  clear
+    8  ping www.globo.com
+    9  ping www.suacaraweb.com.br
+   10  sudo ping www.suacaraweb.com.br
+   11  clear
+   12  root passwd
+   13  sudo root passwd
+   14  su
+   15  clear
+   16  pwd
+   17  whoami
+   18  clear
+   19  sudo nano /etc/apt/sources.list
+   20  ejet
+   21  eject
+   22  touch teste.sh
+   23  nano teste.sh 
+   24  chmod 777 teste.sh 
+   25  ./teste.sh 
+   26  shell
+   27  n
+   28  nano teste.sh 
+   29  ./teste.sh 
+   30  nano teste.sh 
+   31  ./teste.sh 
+   32  nano teste.sh 
+   33  clear
+   34  ping www.suacaraweb.com.br
+   35  pig www.suacaraweb.com.br
+   36  ping www.suacaraweb.com.br
+   37  ping suacaraweb.com.br
+   38  clear
+   39  rebbot
+   40  sudo rebbot
+   41  sudo reboot
+   42  sudo apt-get update
+   43  clear
+   44  sudo apt-get install git
+   45  sudo apt-get update
+   46  ifconfig
+   47  sudo resoluconf
+   48  ifconfig
+   49  sudo nano interfaces
+   50  sudo nano /etc/network/interfaces 
+   51  sudo apt-get update
+   52  sudo nano /etc/network/interfaces
+   53  ifconfig eth1 down
+   54  sudo ifconfig eth1 down
+   55  sudo ifconfig eth0 down
+   56  sudo ifconfig eth0 up
+   57  sudo apt-get update
+   58  sudo nano interfaces
+   59  cd /etc/network/
+   60  ls
+   61  sudo nano interfaces 
+   62  sudo shutdown -r now
+   63  sudo apt-get update
+   64  apt-get install git
+   65  sudo apt-get install git
+   66  ping www.suacaraweb.com.br
+   67  pin www.suacaraweb.com.br
+   68  host www.suacaraweb.com.br
+   69  clear
+   70  git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
+   71  clear
+   72  clear 
+   73  ls -la
+   74  clear
+   75  echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+   76  echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+   77  exit
+   78  tip rbenv
+   79  tipy rbenv
+   80  type rbenv
+   81  git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+   82  sudo apt-get install build-essential
+   83  rbenv install 2.1.0
+   84  clear
+   85  sudo apt-get install libssl-dev
+   86  rbenv install 2.1.0
+   87  rbenv global 2.1.0
+   88  gem install rails
+   89  shutdown -h now
+   90  sudo shutdown -h now
+   91  clear
+   92  sudo su
+   93  exit
+   94  ls
+   95  cd projeto/
+   96  ls
+   97  cd ..
+   98  cd aula1/
+   99  ls
+  100  cd project1/
+  101  ls
+  102  cd config/
+  103  ls
+  104  nano database.yml 
+  105  clear[
+  106  clear
+  107  exit
+  108  sudo apt-get install emacs
+  109  clear
+  110  ls
+  111  cd projeto/
+  112  ls
+  113  cd ..
+  114  ls
+  115  cd aula1/
+  116  rake bd:create
+  117  ls
+  118  cd project1/
+  119  rake bd:create
+  120  ls
+  121  cd db
+  122  cd ..
+  123  rake db:create
+  124  rake db:migrate
+  125  clear
+  126  ls
+  127  cd app/
+  128  ls
+  129  cd ..
+  130  rails generate  scaffold  Post title:string body:text creation_date:datetime
+  131  rake db:migrate
+  132  ls
+  133  clear
+  134  chromium-browser
+  135  cd aula2
+  136  rails new composer1 -m https://raw.github.com/RailsApps/rails-composer/master/composer.rb
+  137  ls
+  138  nano composer1
+  139  rails s
+  140  ls
+  141  cd composer1
+  142  rails s
+  143  ls
+  144  nano config
+  145  sudo nano config
+  146  su nano config.ru
+  147  sudo nano config.ru
+  148  rails s
+  149  ls
+  150  cd config/
+  151  ls
+  152  sudo nano database.yml 
+  153  rails s
+  154  sudo nano database.yml 
+  155  rails s
+  156  postgre
+  157  sudo nano database.yml 
+  158  rails s
+  159  sudo nano database.yml 
+  160  rails s
+  161  sudo nano database.yml 
+  162  rails s
+  163  cd ../..
+  164  ls
+  165  mv composer1 composer1_0104
+  166  ls
+  167  rails new composer1 -m https://raw.github.com/RailsApps/rails-composer/master/composer.rb
+  168  ls
+  169  cd composer1
+  170  rails s
+  171  sudo -u postgres psql template1 
+  172  clear
+  173  ls
+  174  cd aula2
+  175  ls
+  176  cd composer1
+  177  ls
+  178  cd db/
+  179  ls
+  180  cd migrate/
+  181  ls
+  182  git mv 20140326032545_rolify_create_roles.rb 20140326032545_rolify_create_roles.rb
+  183  ls
+  184  rake db: migrate
+  185  cd ..
+  186  git status
+  187  git git add .
+  188  git commit -m "corrigido erro"
+  189  ls
+  190  clear
+  191  ls
+  192  cd aula2
+  193  ls
+  194  cd composer1
+  195  ls
+  196  clear
+  197  ls
+  198  cd config/
+  199  cd initializers/
+  200  emacs omniauth.rb
+  201  rails new composer1 -m https://raw.github.com/RailsApps/rails-composer/master/composer.rb
+  202  cd aula2
+  203  sudo su
+  204  ls
+  205  cd composer1
+  206  ls
+  207  cd config/
+  208  ls
+  209  sudo nano database.yml 
+  210  cd ..
+  211  ls
+  212  cd composer1
+  213  rails s
+  214  rake db:create
+  215  psql -U davidson2 -h localhost -W
+  216  cd ..
+  217  rm -rf
+  218  rm -rf composer1
+  219  rails new composer1 -m https://raw.github.com/RailsApps/rails-composer/master/composer.rb
+  220  rails s
+  221  cd composer1
+  222  rails s
+  223  rake db:migrate
+  224  rails s
+  225  ifconfig
+  226  ls
+  227  mkdir aula2
+  228  cd /etc/network/
+  229  ls
+  230  nano interfaces 
+  231  cd.. / cd..
+  232  cd ..
+  233  clera
+  234  cler
+  235  claer
+  236  clear
+  237  sudo apt-get install chromium-browser
+  238  cd
+  239  ld
+  240  clear
+  241  mkdir projeto
+  242  cd projeto
+  243  cd ..
+  244  ls
+  245  mkdir aula1
+  246  cd aula1/
+  247  ls
+  248  rails 
+  249  clear
+  250  rails new project1
+  251  ls
+  252  rm -r project1
+  253  ls
+  254  sudo apt-get install libpq-dev
+  255  rails new project1 -d postgresql
+  256  clear
+  257  ls
+  258  cd project1/
+  259  ls
+  260  clear
+  261  ls -l
+  262  rails s
+  263  clear
+  264  rails server
+  265  nano Gemfile
+  266  rails s
+  267  bundle
+  268  clear
+  269  ls
+  270  cd config/
+  271  LS
+  272  ls
+  273  nano database.yml
+  274  clear
+  275  rails s
+  276  cd ..
+  277  ls
+  278  cd aula2
+  279  ls
+  280  rails s
+  281  ls
+  282  mv composer1 composer1_0103
+  283  ls
+  284  rm -r composer1
+  285  ls
+  286  mv composer1 composer1_22
+  287  ls
+  288  mv composer1_0103 composer1
+  289  ls
+  290  cd ..
+  291  ls
+  292  cd aula1
+  293  ls
+  294  cd project1/
+  295  ls
+  296  cd config/
+  297  ls
+  298  nano database.yml 
+  299  ls
+  300  chromium-browser
+  301  shutdown -n now
+  302  sudo shutdown -n now
+  303  apt-get install vim
+  304  sudo apt-get install vim
+  305  ls
+  306  nano teste.sh 
+  307  vim teste.sh 
+  308  clear
+  309  ls
+  310  cd comok
+  311  rails generate scaffold Expedient start_time:time end_time:time
+  312  rails generate scaffold Resource name:string
+  313  rails generate scaffold Type_Event name:string duration:time
+  314  rails generate scaffold Event name:string event_date:date start_time:time end_time:time status:string id_user:integer id_typeevent:integer id_resource: integer
+  315  rake db: migrate
+  316  rake db:migrate
+  317  rails s
+  318  git add .
+  319  git commit -m "scaffolds"
+  320* git push r
+  321  git push
+  322  git pull
+  323  git push -u origin master
+  324  rails s
+  325  ls
+  326  cd config/
+  327  ls
+  328  nano routes.rb 
+  329  cd ..
+  330  rake db:rollback
+  331  cd db/migrate/
+  332  ls
+  333  vim 20140429223203_create_events.rb
+  334  rake db:migrate
+  335  rails s
+  336  cd ..
+  337  cd app/views/
+  338  ls
+  339  cd events/
+  340  ls
+  341  vim _form.html.erb
+  342  rails s
+  343  vim _form.html.erb
+  344  rails s
+  345  ls
+  346  cd ..
+  347  ls
+  348  cd comok
+  349  git pull
+  350  rails s
+  351  git revert
+  352  git revert HEAD
+  353  git revert HEAD -m
+  354  git revert HEAD~1
+  355  git status
+  356  git stats
+  357  git add .
+  358  git comment -m "lixao"
+  359  git commit -m "lixao"
+  360  git revert HEAD~2
+  361  git revert HEAD~1
+  362  git status
+  363  rails s
+  364  git revert HEAD~2
+  365  git add .
+  366  git commit -m "lixao2"
+  367  git revert HEAD~2
+  368  git fetch origin master
+  369  git reset --hard FETCH_HEAD
+  370  git clean -df
+  371  git status
+  372  echo 
+  373  ls
+  374  nano hdavid.txt 
+

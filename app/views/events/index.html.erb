@@ -11,8 +11,7 @@
       <th>Id user</th>
       <th>Id typeevent</th>
       <th>Id resource</th>
-      <th>Integer</th>
-      <th></th>
+            <th></th>
       <th></th>
       <th></th>
     </tr>
@@ -27,9 +26,9 @@
         <td><%= event.end_time %></td>
         <td><%= event.status %></td>
         <td><%= event.id_user %></td>
-        <td><%= event.id_typeevent %></td>
+        <td><%= event.id_type_event %></td>
         <td><%= event.id_resource %></td>
-        <td><%= event.integer %></td>
+        
         <td><%= link_to 'Show', event %></td>
         <td><%= link_to 'Edit', edit_event_path(event) %></td>
         <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>

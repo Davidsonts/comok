@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Start time:</strong>
+  <%= @expedient.start_time %>
+</p>
+
+<p>
+  <strong>End time:</strong>
+  <%= @expedient.end_time %>
+</p>
+
+<%= link_to 'Edit', edit_expedient_path(@expedient) %> |
+<%= link_to 'Back', expedients_path %>

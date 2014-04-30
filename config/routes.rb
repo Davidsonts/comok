@@ -1,4 +1,12 @@
 Comok::Application.routes.draw do
+  resources :events
+
+  resources :type_events
+
+  resources :resources
+
+  resources :expedients
+
   root :to => "home#index"
   resources :users, :only => [:index, :show, :edit, :update ]
   get '/auth/:provider/callback' => 'sessions#create'

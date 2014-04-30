@@ -1,0 +1,29 @@
+<h1>Listing expedients</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Start time</th>
+      <th>End time</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @expedients.each do |expedient| %>
+      <tr>
+        <td><%= expedient.start_time %></td>
+        <td><%= expedient.end_time %></td>
+        <td><%= link_to 'Show', expedient %></td>
+        <td><%= link_to 'Edit', edit_expedient_path(expedient) %></td>
+        <td><%= link_to 'Destroy', expedient, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Expedient', new_expedient_path %>

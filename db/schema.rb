@@ -11,10 +11,40 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140422230737) do
+ActiveRecord::Schema.define(version: 20140430000800) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "events", force: true do |t|
+    t.string   "name"
+    t.date     "event_date"
+    t.time     "start_time"
+    t.time     "end_time"
+    t.string   "status"
+    t.integer  "id_user"
+    t.integer  "id_type_event"
+    t.integer  "id_resource"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "events", ["id_resource"], name: "index_events_on_id_resource", using: :btree
+  add_index "events", ["id_type_event"], name: "index_events_on_id_type_event", using: :btree
+  add_index "events", ["id_user"], name: "index_events_on_id_user", using: :btree
+
+  create_table "expedients", force: true do |t|
+    t.time     "start_time"
+    t.time     "end_time"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "resources", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "roles", force: true do |t|
     t.string   "name"
@@ -26,6 +56,13 @@ ActiveRecord::Schema.define(version: 20140422230737) do
 
   add_index "roles", ["name", "resource_type", "resource_id"], name: "index_roles_on_name_and_resource_type_and_resource_id", using: :btree
   add_index "roles", ["name"], name: "index_roles_on_name", using: :btree
+
+  create_table "type_events", force: true do |t|
+    t.string   "name"
+    t.time     "duration"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "name"

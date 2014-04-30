@@ -1,0 +1,29 @@
+<h1>Listing type_events</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Duration</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @type_events.each do |type_event| %>
+      <tr>
+        <td><%= type_event.name %></td>
+        <td><%= type_event.duration %></td>
+        <td><%= link_to 'Show', type_event %></td>
+        <td><%= link_to 'Edit', edit_type_event_path(type_event) %></td>
+        <td><%= link_to 'Destroy', type_event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Type event', new_type_event_path %>

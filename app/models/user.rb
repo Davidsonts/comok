@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
   rolify
   validates_presence_of :name
+  has_many :events
 
   def self.create_with_omniauth(auth)
     create! do |user|

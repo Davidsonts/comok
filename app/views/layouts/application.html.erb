@@ -5,6 +5,7 @@
     <title><%= content_for?(:title) ? yield(:title) : "Comok" %></title>
     <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Comok" %>">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,400,300,600' rel='stylesheet' type='text/css'>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
   </head>
@@ -13,8 +14,10 @@
       <%= render 'layouts/navigation' %>
     </header>
     <main role="main">
-       <%= render 'layouts/messages' %>
-       <%= yield %>
+      <section class="container">
+        <%= render 'layouts/messages' %>
+        <%= yield %>
+      </section>
     </main>
   </body>
 </html>

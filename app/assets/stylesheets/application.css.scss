@@ -13,3 +13,25 @@
  *= require_tree .
  *= require_self
  */
+.navbar-inverse {
+  background-color: #E55B0A;
+  border-color: #E55B0A;
+
+  .navbar-brand {
+    color: white;
+  }
+  .navbar-brand:hover {
+    background: rgba(225,255,255,0.1);
+  }
+
+  .navbar-nav {
+    li {
+      a {
+        color: white;
+      }
+      a:hover {
+        background: rgba(225,255,255,0.1);
+      }
+    }
+  }
+}

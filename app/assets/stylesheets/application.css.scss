@@ -13,11 +13,31 @@
  *= require_tree .
  *= require_self
  */
+h1 {
+  text-align: center;
+  color: #333333;
+}
+
+a {
+  color: #333;
+}
+a:hover {
+  background: transparent;
+  color: #333;
+}
+
+thead {
+  background: #029f00;
+  color: white;
+}
+
 .navbar-inverse {
   background-color: #E55B0A;
   border-color: #E55B0A;
 
   .navbar-brand {
+    font-size: 15px;
+    font-weight: bold;
     color: white;
   }
   .navbar-brand:hover {
@@ -27,6 +47,8 @@
   .navbar-nav {
     li {
       a {
+        font-size: 15px;
+        font-weight: bold;
         color: white;
       }
       a:hover {
@@ -34,4 +56,15 @@
       }
     }
   }
+}
+
+.botao-azul {
+  padding: 10px;
+  background: #009fff;
+  color: white;
+}
+.botao-azul:hover {
+  background: #0140CA;
+  text-decoration: blink;
+  color: white;
 }

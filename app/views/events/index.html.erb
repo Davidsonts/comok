@@ -1,17 +1,17 @@
-<h1>Listing events</h1>
+<h1>Lista de Eventos</h1>
 
-<table>
+<table class="table table-bordered">
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Event date</th>
-      <th>Start time</th>
-      <th>End time</th>
+      <th>Evento</th>
+      <th>Data do Evento</th>
+      <th>Horário de Inicío</th>
+      <th>Horário de Término</th>
       <th>Status</th>
-      <th>Id user</th>
-      <th>Id typeevent</th>
-      <th>Id resource</th>
-            <th></th>
+      <th>Cliente</th>
+      <th>Tipo de Serviço</th>
+      <th>Atendido Por:</th>
+      <th></th>
       <th></th>
       <th></th>
     </tr>
@@ -21,17 +21,16 @@
     <% @events.each do |event| %>
       <tr>
         <td><%= event.name %></td>
-        <td><%= event.event_date %></td>
-        <td><%= event.start_time %></td>
-        <td><%= event.end_time %></td>
+        <td><%= event.event_date.strftime("%d/%m/%Y") %></td>
+        <td><%= event.start_time.strftime("%H:%M") %></td>
+        <td><%= event.end_time.strftime("%H:%M") %></td>
         <td><%= event.status %></td>
         <td><%= event.user_id %></td>
-        <td><%= event.type_event_id %></td>
-        <td><%= event.resource_id %></td>
-        
-        <td><%= link_to 'Show', event %></td>
-        <td><%= link_to 'Edit', edit_event_path(event) %></td>
-        <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= TypeEvent.find(event.type_event_id).name %></td>
+        <td><%= Resource.find(event.resource_id).name %></td>
+        <td><%= link_to 'Detalhes', event %></td>
+        <td><%= link_to 'Editar', edit_event_path(event) %></td>
+        <td><%= link_to 'Deletar', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -39,4 +38,4 @@
 
 <br>
 
-<%= link_to 'New Event', new_event_path %>
+<%= link_to 'Agendar Novo Evento', new_event_path, :class => "botao-azul" %>

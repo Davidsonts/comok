@@ -5,7 +5,7 @@
     <tr>
       <th>Evento</th>
       <th>Data do Evento</th>
-      <th>Horário de Inicío</th>
+      <th>Horário de Início</th>
       <th>Horário de Término</th>
       <th>Status</th>
       <th>Cliente</th>
@@ -28,9 +28,66 @@
         <td><%= event.user_id %></td>
         <td><%= TypeEvent.find(event.type_event_id).name %></td>
         <td><%= Resource.find(event.resource_id).name %></td>
-        <td><%= link_to 'Detalhes', event %></td>
-        <td><%= link_to 'Editar', edit_event_path(event) %></td>
-        <td><%= link_to 'Deletar', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><!--<%= link_to 'Detalhes', event %>-->
+          <button class="btn btn-link btn-xs" data-toggle="modal" data-target="#event_<%= event.id %>">
+            Detalhes
+          </button>
+        </td>
+        <td><%= link_to 'Editar', edit_event_path(event), :class => "btn btn-link btn-xs" %></td>
+        <td><%= link_to 'Deletar', event, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-link btn-xs" %></td>
+
+        <!-- Modal -->
+        <div class="modal fade" id="event_<%= event.id %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel"><%= event.name %></h4>
+              </div>
+              <div class="modal-body">
+                <p>
+                  <strong>Evento:</strong>
+                  <%= event.name %>
+                </p>
+
+                <p>
+                  <strong>Data do Evento:</strong>
+                  <%= event.event_date.strftime("%d/%m/%Y") %>
+                </p>
+
+                <p>
+                  <strong>Horário de Início:</strong>
+                  <%= event.start_time.strftime("%H:%M") %>
+                </p>
+
+                <p>
+                  <strong>Horário de Término:</strong>
+                  <%= event.end_time.strftime("%H:%M") %>
+                </p>
+
+                <p>
+                  <strong>Status:</strong>
+                  <%= event.status %>
+                </p>
+
+                <p>
+                  <strong>Cliente:</strong>
+                  <%= event.user_id %>
+                </p>
+
+                <p>
+                  <strong>Tipo de Serviço:</strong>
+                  <%= TypeEvent.find(event.type_event_id).name %>
+                </p>
+
+                <p>
+                  <strong>Atendido Por:</strong>
+                  <%= Resource.find(event.resource_id).name %>
+                </p>
+              </div>
+            </div><!-- end .modal-content -->
+          </div><!-- end .modal-dialog -->
+        </div><!-- end .modal.fade -->
       </tr>
     <% end %>
   </tbody>

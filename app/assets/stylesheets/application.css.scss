@@ -58,13 +58,53 @@ thead {
   }
 }
 
+.form-actions {
+  a {
+    display: inline-block;
+    width: 100%;
+  }
+}
+.show-event-div {
+  width: 50%;
+  margin: auto;
+  margin-top: 30px;
+
+  a {
+    display: inline-block;
+    width: 100%;
+  }
+}
+
 .botao-azul {
+  border-radius: 0px;
   padding: 10px;
   background: #009fff;
   color: white;
 }
 .botao-azul:hover {
   background: #0140CA;
+  text-decoration: blink;
+  color: white;
+}
+.botao-amarelo {
+  border-radius: 0px;
+  padding: 10px;
+  background: #FFBF00;
+  color: white;
+}
+.botao-amarelo:hover {
+  background: #FF7400;
+  text-decoration: blink;
+  color: white;
+}
+.botao-verde {
+  border-radius: 0px;
+  padding: 10px;
+  background: #029f00;
+  color: white;
+}
+.botao-verde:hover {
+  background: #008500;
   text-decoration: blink;
   color: white;
 }

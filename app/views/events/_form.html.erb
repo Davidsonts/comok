@@ -2,17 +2,27 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
-    <%= f.input :name %>
-    <%= f.input :event_date %>
-    <%= f.input :start_time %>
-    <%= f.input :end_time %>
-    <%= f.input :status %>
-    <%= f.input :user_id %>
-    <%= f.input :type_event_id %>
-    <%= f.input :resource_id %>
+    <%= f.input :name, :label => "Evento" %>
+    <br>
+    <div class="row">
+      <div class="col-sm-5"><%= f.input :event_date, :label => "Data" %></div>
+      <div class="col-sm-3"><%= f.input :start_time, :label => "Início" %></div>
+      <div class="col-sm-3"><%= f.input :end_time, :label => "Término" %></div>
     </div>
+    <br>
+    <%= f.input :status, :label => "Status" %>
+    <br>
+    <%= f.input :user_id, :label => "Cliente" %>
+    <br>
+    <%= f.input :type_event_id, :label => "Tipo de Serviço" %>
+    <br>
+    <%= f.input :resource_id, :label => "Atendido Por" %>
+  </div>
+
+  <br><br>
 
   <div class="form-actions">
-    <%= f.button :submit %>
+    <div class="col-sm-6"><%= f.button :submit, :class => "botao-azul", :value => "Criar Evento" %></div>
+    <div class="col-sm-6"><%= link_to 'Back', events_path, :class => "botao-amarelo btn" %></div>
   </div>
 <% end %>

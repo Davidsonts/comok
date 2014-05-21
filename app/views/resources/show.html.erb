@@ -1,9 +1,11 @@
-<p id="notice"><%= notice %></p>
+<div class="show-event-div">
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @resource.name %>
-</p>
+  <p>
+    <strong>Nome do Recurso:</strong>
+    <%= @resource.name %>
+  </p>
 
-<%= link_to 'Edit', edit_resource_path(@resource) %> |
-<%= link_to 'Back', resources_path %>
+  <div class="col-sm-6"><%= link_to 'Editar', edit_resource_path(@resource), :class => "botao-azul btn" %></div>
+  <div class="col-sm-6"><%= link_to 'Voltar', resources_path, :class => "botao-amarelo btn" %></div>
+</div>

@@ -1,9 +1,9 @@
-<h1>Listing resources</h1>
+<h1>Recursos</h1>
 
-<table>
+<table class="table table-bordered">
   <thead>
     <tr>
-      <th>Name</th>
+      <th>Nome do Recurso</th>
       <th></th>
       <th></th>
       <th></th>
@@ -14,9 +14,31 @@
     <% @resources.each do |resource| %>
       <tr>
         <td><%= resource.name %></td>
-        <td><%= link_to 'Show', resource %></td>
-        <td><%= link_to 'Edit', edit_resource_path(resource) %></td>
-        <td><%= link_to 'Destroy', resource, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><!--<%= link_to 'Show', resource %>-->
+          <button class="btn btn-link btn-xs" data-toggle="modal" data-target="#resource_<%= resource.id %>">
+            Detalhes
+          </button>
+        </td>
+        <td><%= link_to 'Editar', edit_resource_path(resource), :class => "btn btn-link btn-xs" %></td>
+        <td><%= link_to 'Deletar', resource, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-link btn-xs" %></td>
+
+        <!-- Modal -->
+        <div class="modal fade" id="resource_<%= resource.id %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel"><%= resource.name %></h4>
+              </div>
+              <div class="modal-body">
+                <p>
+                  <strong>Nome do Recurso:</strong>
+                  <%= resource.name %>
+                </p>
+              </div>
+            </div><!-- end .modal-content -->
+          </div><!-- end .modal-dialog -->
+        </div><!-- end .modal.fade -->
       </tr>
     <% end %>
   </tbody>
@@ -24,4 +46,4 @@
 
 <br>
 
-<%= link_to 'New Resource', new_resource_path %>
+<%= link_to 'Cadastrar Novo Recurso', new_resource_path, :class => "botao-azul" %>

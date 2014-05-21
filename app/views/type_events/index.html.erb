@@ -1,10 +1,10 @@
-<h1>Listing type_events</h1>
+<h1>Tipos de Eventos</h1>
 
-<table>
+<table class="table table-bordered">
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Duration</th>
+      <th>Nome do Evento</th>
+      <th>Duração do Evento (Tempo Padrão)</th>
       <th></th>
       <th></th>
       <th></th>
@@ -15,10 +15,37 @@
     <% @type_events.each do |type_event| %>
       <tr>
         <td><%= type_event.name %></td>
-        <td><%= type_event.duration %></td>
-        <td><%= link_to 'Show', type_event %></td>
-        <td><%= link_to 'Edit', edit_type_event_path(type_event) %></td>
-        <td><%= link_to 'Destroy', type_event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= type_event.duration.strftime("%H:%M") %></td>
+        <td><!--<%= link_to 'Show', type_event %>-->
+          <button class="btn btn-link btn-xs" data-toggle="modal" data-target="#type_event_<%= type_event.id %>">
+            Detalhes
+          </button>
+        </td>
+        <td><%= link_to 'Editar', edit_type_event_path(type_event), :class => "btn btn-link btn-xs" %></td>
+        <td><%= link_to 'Deletar', type_event, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-link btn-xs" %></td>
+
+        <!-- Modal -->
+        <div class="modal fade" id="type_event_<%= type_event.id %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel"><%= type_event.name %></h4>
+              </div>
+              <div class="modal-body">
+                <p>
+                  <strong>Nome do Evento:</strong>
+                  <%= type_event.name %>
+                </p>
+
+                <p>
+                  <strong>Duração do Evento:</strong>
+                  <%= type_event.duration.strftime("%H:%M") %>
+                </p>
+              </div>
+            </div><!-- end .modal-content -->
+          </div><!-- end .modal-dialog -->
+        </div><!-- end .modal.fade -->
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +53,4 @@
 
 <br>
 
-<%= link_to 'New Type event', new_type_event_path %>
+<%= link_to 'Cadastrar Novo Tipo de Evento', new_type_event_path, :class => "botao-azul" %>

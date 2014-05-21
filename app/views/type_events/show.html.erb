@@ -1,14 +1,16 @@
-<p id="notice"><%= notice %></p>
+<div class="show-event-div">
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @type_event.name %>
-</p>
+  <p>
+    <strong>Nome do Evento:</strong>
+    <%= @type_event.name %>
+  </p>
 
-<p>
-  <strong>Duration:</strong>
-  <%= @type_event.duration %>
-</p>
+  <p>
+    <strong>Duração do Evento:</strong>
+    <%= @type_event.duration.strftime("%H:%M") %>
+  </p>
 
-<%= link_to 'Edit', edit_type_event_path(@type_event) %> |
-<%= link_to 'Back', type_events_path %>
+  <div class="col-sm-6"><%= link_to 'Editar', edit_type_event_path(@type_event), :class => "botao-azul btn" %></div>
+  <div class="col-sm-6"><%= link_to 'Voltar', type_events_path, :class => "botao-amarelo btn" %></div>
+</div>

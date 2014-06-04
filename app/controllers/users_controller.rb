@@ -23,6 +23,13 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
+  def destroy
+    @user.destroy
+    respond_to do |format|
+      format.html { redirect_to users_url }
+    end
+  end
+
   private
 
   def secure_params

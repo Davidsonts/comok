@@ -2,11 +2,14 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
-    <%= f.input :start_time %>
-    <%= f.input :end_time %>
+    <%= f.input :start_time, :label => "Início do Expediente" %>
+    <br>
+    <%= f.input :end_time, :label => "Fim do Expediente" %>
+    <br>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit %>
+    <div class="col-sm-6"><%= f.button :submit, :class => "botao-azul", :value => "Cadastrar" %></div>
+    <div class="col-sm-6"><%= link_to 'Back', expedients_path, :class => "botao-amarelo btn" %></div>
   </div>
 <% end %>

@@ -1,14 +1,14 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Start time:</strong>
-  <%= @expedient.start_time %>
+  <strong>Início do Expediente:</strong>
+  <%= @expedient.start_time.strftime("%H:%M") %>
 </p>
 
 <p>
-  <strong>End time:</strong>
-  <%= @expedient.end_time %>
+  <strong>Fim do Expediente:</strong>
+  <%= @expedient.end_time.strftime("%H:%M") %>
 </p>
 
-<%= link_to 'Edit', edit_expedient_path(@expedient) %> |
-<%= link_to 'Back', expedients_path %>
+<div class="col-sm-6"><%= link_to 'Editar', edit_expedient_path(@expedient), :class => "botao-azul btn" %></div>
+<div class="col-sm-6"><%= link_to 'Voltar', expedients_path, :class => "botao-amarelo btn"%></div>

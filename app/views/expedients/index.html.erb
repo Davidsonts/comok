@@ -1,10 +1,11 @@
-<h1>Listing expedients</h1>
+<h1>Expedientes</h1>
+<p class="bg-success">Cadastrar o horário do expediente do estabelecimento</p>
 
-<table>
+<table class="table table-bordered">
   <thead>
     <tr>
-      <th>Start time</th>
-      <th>End time</th>
+      <th>Início do Expediente</th>
+      <th>Fim do Expediente</th>
       <th></th>
       <th></th>
       <th></th>
@@ -16,9 +17,36 @@
       <tr>
         <td><%= expedient.start_time %></td>
         <td><%= expedient.end_time %></td>
-        <td><%= link_to 'Show', expedient %></td>
-        <td><%= link_to 'Edit', edit_expedient_path(expedient) %></td>
-        <td><%= link_to 'Destroy', expedient, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><!--<%= link_to 'Show', expedient %>-->
+          <button class="btn btn-link btn-xs" data-toggle="modal" data-target="#expedient_<%= expedient.id %>">
+            Detalhes
+          </button>
+        </td>
+        <td><%= link_to 'Editar', edit_expedient_path(expedient), :class => "btn btn-link btn-xs" %></td>
+        <td><%= link_to 'Deletar', expedient, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-link btn-xs" %></td>
+
+        <!-- Modal -->
+        <div class="modal fade" id="expedient_<%= expedient.id %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">Horário do Expediente</h4>
+              </div>
+              <div class="modal-body">
+                <p>
+                  <strong>Início do Expediente:</strong>
+                  <%= expedient.start_time.strftime("%H:%M") %>
+                </p>
+
+                <p>
+                  <strong>Fim do Expediente:</strong>
+                  <%= expedient.end_time.strftime("%H:%M") %>
+                </p>
+              </div>
+            </div><!-- end .modal-content -->
+          </div><!-- end .modal-dialog -->
+        </div><!-- end .modal.fade -->
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +54,4 @@
 
 <br>
 
-<%= link_to 'New Expedient', new_expedient_path %>
+<%= link_to 'Cadastrar Novo Expediente', new_expedient_path, :class => "botao-azul" %>

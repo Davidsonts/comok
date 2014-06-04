@@ -108,3 +108,33 @@ thead {
   text-decoration: blink;
   color: white;
 }
+
+.index-container {
+  .container-facebook {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 50px;
+    background: rgb(0,159,255);
+  }
+
+  .container-calendario {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 50px;
+    background: #029f00;
+  }
+
+  .container-img {
+    text-align: center;
+
+    .glyphicon {
+      font-size: 90px;
+      color: white;
+    }
+  }
+
+  .container-txt {
+    font-size: 20px;
+    color: white;
+  }
+}

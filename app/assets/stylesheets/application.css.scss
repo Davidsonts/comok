@@ -110,18 +110,22 @@ thead {
 }
 
 .index-container {
-  .container-facebook {
+  .container-geral {
     padding-top: 20px;
     padding-bottom: 20px;
     border-radius: 50px;
+  }
+
+  .container-facebook {
     background: rgb(0,159,255);
   }
 
   .container-calendario {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border-radius: 50px;
     background: #029f00;
+  }
+
+  .container-anuncio {
+    background: #bb0000;
   }
 
   .container-img {
@@ -134,7 +138,17 @@ thead {
   }
 
   .container-txt {
-    font-size: 20px;
-    color: white;
+    p {
+      margin-top: 5px;
+      line-height: 25px;
+      font-size: 20px;
+      color: white;
+    }
+
+    @media (max-width: 767px){
+      p {
+        text-align: center;
+      }
+    }
   }
 }

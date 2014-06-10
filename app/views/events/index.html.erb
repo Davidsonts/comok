@@ -25,8 +25,19 @@
         <td><%= event.start_time.strftime("%H:%M") %></td>
         <td><%= event.end_time.strftime("%H:%M") %></td>
         <td><%= event.status %></td>
-        <td><%= event.user_id %></td>
+
+        <% if event.user_id %>
+        <td><%= User.find(event.user_id).name %></td>
+        <% else %>
+        <td></td>
+        <% end %>
+
+        <% if event.type_event_id %>
         <td><%= TypeEvent.find(event.type_event_id).name %></td>
+        <% else %>
+        <td></td>
+        <% end %>
+
         <td><%= Resource.find(event.resource_id).name %></td>
         <td><!--<%= link_to 'Detalhes', event %>-->
           <button class="btn btn-link btn-xs" data-toggle="modal" data-target="#event_<%= event.id %>">
@@ -75,10 +86,14 @@
                   <%= event.user_id %>
                 </p>
 
+                <% if event.type_event_id %>
                 <p>
                   <strong>Tipo de Serviço:</strong>
                   <%= TypeEvent.find(event.type_event_id).name %>
                 </p>
+                <% else %>
+                <p></p>
+                <% end %>
 
                 <p>
                   <strong>Atendido Por:</strong>

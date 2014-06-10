@@ -12,7 +12,7 @@
     <br>
     <%= f.input :status, :label => "Status" %>
     <br>
-    <%= f.input :user_id, :label => "Cliente" %>
+    <%= f.hidden_field :user_id, :value => current_user.id %>
     <br>
     <%= f.input :type_event_id, :label => "Tipo de Serviço" %>
     <br>

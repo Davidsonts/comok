@@ -13,10 +13,14 @@
     <%= f.input :status, :label => "Status" %>
     <br>
     <%= f.hidden_field :user_id, :value => current_user.id %>
-    <br>
-    <%= f.input :type_event_id, :label => "Tipo de Serviço" %>
-    <br>
-    <%= f.input :resource_id, :label => "Atendido Por" %>
+
+    <!--<%= f.input :type_event_id, :label => "Tipo de Serviço" %>-->
+    <label>Tipo de Serviço</label><br>
+    <%= f.select(:type_event_id, TypeEvent.all.collect {|a| [a.name, a.id]}) %>
+    <br><br>
+    <!--<%= f.input :resource_id, :label => "Atendido Por" %>-->
+    <label>Atendido Por</label><br>
+    <%= f.select(:resource_id, Resource.all.collect {|a| [a.name, a.id]}) %>
   </div>
 
   <br><br>
